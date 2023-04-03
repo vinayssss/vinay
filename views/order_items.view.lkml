@@ -124,7 +124,11 @@ view: order_items {
     type: count
     drill_fields: [detail*]
   }
-
+  measure: largest_order {
+    type: max
+    sql: ${sale_price};;
+    value_format_name: usd
+  }
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
