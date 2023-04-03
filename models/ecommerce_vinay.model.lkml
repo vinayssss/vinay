@@ -235,7 +235,12 @@ explore: products {
   }
 }
 
-explore: users {}
+explore: users {
+  access_filter: {
+    field: users.city
+    user_attribute: access_filter
+  }
+}
 
 explore: transaction_detail {
   join: transaction_detail__items {
