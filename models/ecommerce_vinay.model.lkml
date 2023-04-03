@@ -238,7 +238,7 @@ explore: products {
 explore: users {
   access_filter: {
     field: users.city
-    user_attribute: access_filter
+    user_attribute: vinay
   }
 }
 
