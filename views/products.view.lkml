@@ -77,7 +77,10 @@ view: products {
     type: count
     drill_fields: [detail*]
   }
-
+  measure: name_list {
+    type: list
+    list_field: brand
+  }
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
