@@ -240,11 +240,8 @@ access_grant: tested {
 }
 
 explore: users {
-  required_access_grants: [tested]
-  access_filter: {
-    field: users.city
-    user_attribute: vinay
-  }
+
+
 }
 
 explore: transaction_detail {
