@@ -234,12 +234,13 @@ explore: products {
     relationship: many_to_one
   }
 }
-access_grant: tested {
-  user_attribute: vinay
-  allowed_values: ["Austin","vinay"]
-}
+
 
 explore: users {
+  access_filter: {
+    field: users.city
+    user_attribute: vinmahe
+  }
 
 
 }
