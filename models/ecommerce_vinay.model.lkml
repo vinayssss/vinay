@@ -237,10 +237,8 @@ explore: products {
 
 
 explore: users {
-  access_filter: {
-    field: users.city
-    user_attribute: vinmahe
-  }
+
+
 
 
 }
