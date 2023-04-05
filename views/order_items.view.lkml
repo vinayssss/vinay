@@ -136,7 +136,7 @@ view: order_items {
 
   measure: percentage_organic_users {
     type: number
-    sql: ${user_count_organic}/${usersidcount} ;;
+    sql: ${user_count_organic}/${count} ;;
     value_format_name: percent_4
   }
 
