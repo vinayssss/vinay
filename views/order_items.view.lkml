@@ -149,6 +149,15 @@ view: order_items {
     sql: ${sale_price};;
     value_format_name: usd
   }
+  measure: last_updated_date {
+
+    type: date
+
+    sql: MAX(${created_date}) ;;
+
+    convert_tz: no
+
+  }
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
