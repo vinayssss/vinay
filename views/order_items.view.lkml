@@ -119,6 +119,26 @@ view: order_items {
     # hidden: yes
     sql: ${TABLE}.user_id ;;
   }
+  measure: user_count_organic{
+    type: count_distinct
+    sql: ${user_id} ;;
+    drill_fields: [detail*]
+    filters: {
+      field: users.traffic_source
+      value: "Organic"
+    }
+  }
+  measure: usersidcount {
+    type: count_distinct
+    sql: ${user_id} ;;
+    drill_fields: [detail*]
+  }
+
+  measure: percentage_organic_users {
+    type: number
+    sql: ${user_count_organic}/${usersidcount} ;;
+    value_format_name: percent_0
+  }
 
   measure: count {
     type: count
