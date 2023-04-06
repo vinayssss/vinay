@@ -124,7 +124,7 @@ view: users {
 measure: count_male {
   type: count_distinct
   sql: ${gender} ;;
-  filters: [gender: "male"]
+  filters: [gender: "Male"]
 }
   # ----- Sets of fields for drilling ------
   set: detail {
