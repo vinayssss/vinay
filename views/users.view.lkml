@@ -121,7 +121,11 @@ view: users {
     type: count
     drill_fields: [detail*]
   }
-
+measure: count_male {
+  type: count_distinct
+  sql: ${gender} ;;
+  filters: [gender: "male"]
+}
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
