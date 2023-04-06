@@ -142,6 +142,7 @@ measure: count_order_id {
 measure: orderperuser {
   type: number
   sql: ${count_order_id}/${usersidcount} ;;
+  value_format_name: decimal_1
 }
   measure: percentage_organic_users {
     type: number
