@@ -114,7 +114,7 @@ view: users {
     group_label: "date-formatt"
     label: "date_full_form"
     sql: ${created_date} ;;
-    value_format: "dddd-mmmm-yyyy"
+    value_format: "dd mmmm yyyy"
   }
 
   measure: count {
