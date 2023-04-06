@@ -110,6 +110,13 @@ view: users {
     sql: ${TABLE}.zip ;;
   }
 
+  dimension: date_change {
+    group_label: "date-formatt"
+    label: "date_full_form"
+    sql: ${created_date} ;;
+    value_format: "dddd-mmmm-yyyy"
+  }
+
   measure: count {
     type: count
     drill_fields: [detail*]
