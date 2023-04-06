@@ -126,6 +126,11 @@ measure: count_male {
   sql: ${gender} ;;
   filters: [gender: "Male"]
 }
+dimension: gender_ {
+  type: yesno
+  sql: 1 ;;
+  drill_fields: [detail*]
+}
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
