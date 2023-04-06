@@ -133,7 +133,16 @@ view: order_items {
     sql: ${user_id} ;;
     drill_fields: [detail*]
   }
+measure: count_order_id {
+  type: count_distinct
+  sql: ${order_id} ;;
+  drill_fields: [detail*]
+}
 
+measure: orderperuser {
+  type: number
+  sql: ${count_order_id}/${usersidcount} ;;
+}
   measure: percentage_organic_users {
     type: number
     sql: ${user_count_organic}/${count} ;;
