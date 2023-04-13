@@ -1,5 +1,5 @@
 - name: State_users_count
-  title: Untitled Visualization
+  title: Map-USA Visualization
   model: ecommerce_vinay
   explore: order_items
   type: looker_google_map
