@@ -1,5 +1,5 @@
-- name: Test_a_unique_name_1681391497
-  title: USA_MAP Visualization
+- name: ecomdash
+  title: ecomdash
   model: ecommerce_vinay
   explore: order_items
   type: looker_google_map
