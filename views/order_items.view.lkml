@@ -157,7 +157,7 @@ measure: orderperuser {
   measure: largest_order {
     type: max
     sql: ${sale_price};;
-    value_format_name: usd
+    value_format_name: usd_0
   }
   measure: last_updated_date {
 
