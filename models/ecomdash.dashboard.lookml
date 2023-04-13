@@ -1,4 +1,4 @@
-- name: State_users_count
+- name: ecomdash
   title: Map-USA Visualization
   model: ecommerce_vinay
   explore: order_items
