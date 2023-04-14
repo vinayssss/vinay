@@ -3,6 +3,7 @@ connection: "looker_private_demo"
 
 # include all the views
 include: "/views/**/*.view"
+#include: "/Country_user_count.dashboard.lookml"
 
 # Datagroups define a caching policy for an Explore. To learn more,
 # use the Quick Help panel on the right to see documentation.
