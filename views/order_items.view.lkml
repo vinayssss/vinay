@@ -168,6 +168,10 @@ measure: orderperuser {
     convert_tz: no
 
   }
+  measure: new {
+    type: number
+    sql: (${count_order_id}-${total_sale_price})/${average_sale_price} ;;
+  }
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
