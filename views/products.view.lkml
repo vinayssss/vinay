@@ -75,7 +75,7 @@ view: products {
 dimension: brandsss {
   type: string
   sql: ${TABLE}.brand ;;
-  html: {{value}};;
+  html: {{value|raw}};;
 }
   measure: count {
     type: count
