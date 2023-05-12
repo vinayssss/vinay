@@ -72,7 +72,11 @@ view: products {
     type: string
     sql: ${TABLE}.sku ;;
   }
-
+dimension: brandsss {
+  type: string
+  sql: ${TABLE}.brand ;;
+  html: {{value}};;
+}
   measure: count {
     type: count
     drill_fields: [detail*]
