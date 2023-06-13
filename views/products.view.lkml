@@ -40,6 +40,8 @@ view: products {
   measure: total_cost {
     type: sum
     sql: ${cost} ;;
+    value_format_name: usd
+    drill_fields: [brand,total_cost]
   }
 
   measure: average_cost {
