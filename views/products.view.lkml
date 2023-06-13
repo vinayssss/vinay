@@ -21,6 +21,7 @@ view: products {
   dimension: brand {
     type: string
     sql: ${TABLE}.brand ;;
+    drill_fields: [brand,total_cost]
   }
 
   dimension: category {
@@ -41,7 +42,7 @@ view: products {
     type: sum
     sql: ${cost} ;;
     value_format_name: usd
-    drill_fields: [brand]
+    #drill_fields: [brand]
   }
 
   measure: average_cost {
