@@ -88,7 +88,7 @@ view: order_items {
     type: sum
     sql: ${sale_price} ;;
     value_format_name: usd
-    drill_fields: [id,total_sale_price]
+    drill_fields: [status,total_sale_price]
   }
 
   measure: average_sale_price {
