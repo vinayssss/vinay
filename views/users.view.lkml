@@ -119,7 +119,7 @@ view: users {
 
   measure: count {
     type: count
-    drill_fields: [detail*]
+    drill_fields: [id, city, state, country]
   }
 measure: count_male {
   type: count_distinct
