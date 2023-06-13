@@ -21,7 +21,7 @@ view: products {
   dimension: brand {
     type: string
     sql: ${TABLE}.brand ;;
-    drill_fields: [brand,total_cost]
+    #drill_fields: [brand,total_cost]
   }
 
   dimension: category {
@@ -82,7 +82,7 @@ dimension: brandsss {
 }
   measure: count {
     type: count
-    drill_fields: [detail*]
+    drill_fields: [brand,total_cost]
   }
   measure: name_list {
     type: list
