@@ -42,7 +42,7 @@ view: products {
     type: sum
     sql: ${cost} ;;
     value_format_name: usd
-    # drill_fields: [brand,total_cost]
+    drill_fields: [brand,total_cost]
     # link: {
     #   label: "Explore Top 20 Results"
     #   url: "{{ link }}&limit=20"
