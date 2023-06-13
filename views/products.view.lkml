@@ -86,11 +86,8 @@ dimension: brandsss {
 }
   measure: count {
     type: count
-    drill_fields: [brand,total_cost]
-    link: {
-      label: "Explore Top 20 Results"
-      url: "{{ link }}&limit=20"
-    }
+    drill_fields: [detail*]
+
   }
   measure: name_list {
     type: list
