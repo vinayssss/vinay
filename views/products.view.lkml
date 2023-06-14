@@ -72,7 +72,11 @@ view: products {
 
   dimension: retail_price {
     type: number
-    sql: Replace(${TABLE}.retail_price,45,null) ;;
+    sql: ${TABLE}.retail_price;;
+  }
+  dimension: retail {
+    type: number
+    sql: if(${retail_price}>45,null,${retail_price} ;;
   }
 
   dimension: sku {
