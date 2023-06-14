@@ -76,7 +76,7 @@ view: products {
   }
   dimension: retail {
     type: number
-    sql: if(${retail_price}>45,null,${retail_price} ;;
+    sql: if(${retail_price}>45,null,${retail_price}) ;;
   }
 
   dimension: sku {
