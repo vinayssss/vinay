@@ -113,7 +113,8 @@ view: order_items {
 
   dimension: status {
     type: string
-    sql: ${TABLE}.status ;;
+    sql:replace( ${TABLE}.status,"Complete",1) ;;
+
   }
 
   dimension: user_id {
