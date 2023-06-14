@@ -113,7 +113,7 @@ view: order_items {
 
   dimension: status {
     type: string
-    sql:replace( ${TABLE}.status,"Complete",1) ;;
+    sql: ${TABLE}.status ;;
 
   }
 
