@@ -33,7 +33,7 @@ dimension: combination {
   sql: concat(${brand},",",${category},",",${department}) ;;
 }
   parameter: 13_distinct_value {
-    type: unquoted
+    type: string
     allowed_value: {
       label: "Allegra K"
       value: "Allegra K"
@@ -95,10 +95,16 @@ dimension: combination {
       value: "Women"
     }
   }
-dimension: Combination_13{
-  type: string
-  sql: ${13_distinct_value} ;;
-}
+# dimension: Combination_13{
+#   type: string
+#   label_from_parameter: 13_distinct_value
+#   sql: {% if ${combination} == ${13_distinct_value}}
+#       ${combination}
+#       {% else %}
+#         0
+#       {% endif %}
+#       ;;
+# }
 
 
   dimension: cost {
