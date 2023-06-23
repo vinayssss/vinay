@@ -43,71 +43,27 @@ dimension: combination {
       label: "Levi's"
       value: "Levi's"
     }
-    allowed_value: {
-      label: "Speedo"
-      value: "Speedo"
-    }
-    allowed_value: {
-      label: "Dockers"
-      value: "Dockers"
-    }
-    allowed_value: {
-      label: "Hanes"
-      value: "Hanes"
-    }
-    allowed_value: {
-      label: "Jeans"
-      value: "Jeans"
-    }
-    allowed_value: {
-      label: "Allegra K"
-      value: "Allegra K"
-    }
-    allowed_value: {
-      label: "Underwear"
-      value: "Underwear"
-    }
-    allowed_value: {
-      label: "Carhartt"
-      value: "Carhartt"
-    }
-    allowed_value: {
-      label: "Allegra K"
-      value: "Allegra K"
-    }
-    allowed_value: {
-      label: "Levi's"
-      value: "Levi's"
-    }
-    allowed_value: {
-      label: "Active"
-      value: "Active"
-    }
-    allowed_value: {
-      label: "Hagger"
-      value: "Hagger"
-    }
+
     allowed_value: {
       label: "Men"
       value: "Men"
     }
-    allowed_value: {
-      label: "Women"
-      value: "Women"
-    }
+
   }
 dimension: combision{
   label_from_parameter: 13_distinct_value
   sql:
-  {% if (${13_distinct_value} == "Allegra K") %}
-  ${combination}
-  {% elsif (${13_distinct_value} == "Levi's") %}
-  ${combination}
+  {% if 13_distinct_value._parameter_value == "Allegra K" %}
+  brand._value="Allegra K"
+
   {% else %}
   NULL
   {% endif %} ;;
 }
-
+dimension: Allegra_K{
+  type: string
+  sql: ${brand}="Allegra K" ;;
+}
 
   dimension: cost {
     type: number
