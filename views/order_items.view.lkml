@@ -137,13 +137,28 @@ view: order_items {
     drill_fields: [detail*]
   }
 
-  measure: emojis {
-    type: number
-    html: case when ${total_sale_price} < ${average_sale_price} then "🟢"
-when ${total_value} > ${average_sale_price} and ${total_sale_price} < ${count } then "🟡"
-when ${total_sale_price} > ${count} then "🔴"
-end ;;
-  }
+  # measure: emojiss {
+  #   type: sum
+  #   sql: ${sale_price} ;;
+  #   html:
+  #   {% if {order_item.emojiss} < 200  %}
+  #   <a>&#128308</a>
+  # { % else %}
+  #   {% if (order_item.emojiss) < 100  %}
+  # <a>&#128993</a>
+  # {%else%}
+  # <a>&#128994</a>
+  #   {%endif%};;
+  #   }
+
+  # {% if value > 100 %}
+  #     <span style="color:darkgreen;">{{ rendered_value }}</span>
+  #   {% elsif value > 50 %}
+  #     <span style="color:goldenrod;">{{ rendered_value }}</span>
+  #   {% else %}
+  #     <span style="color:darkred;">{{ rendered_value }}</span>
+  #   {% endif %} ;;
+
 measure: count_order_id {
   type: count_distinct
   sql: ${order_id} ;;

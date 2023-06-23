@@ -28,7 +28,10 @@ view: products {
     type: string
     sql: ${TABLE}.category ;;
   }
-
+dimension: combination {
+  type: string
+  sql: concat(${brand},",",${category},",",${department}) ;;
+}
   dimension: cost {
     type: number
     sql: ${TABLE}.cost ;;
