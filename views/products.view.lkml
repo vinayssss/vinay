@@ -31,7 +31,7 @@ view: products {
 dimension: combination {
   type: string
   sql: concat(${brand},",",${category},",",${department}) ;;
-  suggestions: ["Men","Women","Allegra K"]
+  #suggestions: ["Men","Women","Allegra K"]
 }
   parameter: 13_distinct_value {
     type: string
