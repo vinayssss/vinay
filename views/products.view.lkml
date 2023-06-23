@@ -31,6 +31,7 @@ view: products {
 dimension: combination {
   type: string
   sql: concat(${brand},",",${category},",",${department}) ;;
+  suggestions: ["Men"]
 }
   parameter: 13_distinct_value {
     type: string
@@ -95,15 +96,16 @@ dimension: combination {
       value: "Women"
     }
   }
-# dimension: Combination_13{
-#   type: string
+# dimension: combision{
 #   label_from_parameter: 13_distinct_value
-#   sql: {% if ${combination} == ${13_distinct_value}}
-#       ${combination}
-#       {% else %}
-#         0
-#       {% endif %}
-#       ;;
+#   sql:
+#   {% if (${13_distinct_value} = "Allegra K") %}
+#   ${combination}
+#   {% elsif (${13_distinct_value} = "Levi's") %}
+#   ${combination}
+#   {% else %}
+#   NULL
+#   {% endif %} ;;
 # }
 
 
