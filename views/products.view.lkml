@@ -96,17 +96,17 @@ dimension: combination {
       value: "Women"
     }
   }
-# dimension: combision{
-#   label_from_parameter: 13_distinct_value
-#   sql:
-#   {% if (${13_distinct_value} = "Allegra K") %}
-#   ${combination}
-#   {% elsif (${13_distinct_value} = "Levi's") %}
-#   ${combination}
-#   {% else %}
-#   NULL
-#   {% endif %} ;;
-# }
+dimension: combision{
+  label_from_parameter: 13_distinct_value
+  sql:
+  {% if (${13_distinct_value} == "Allegra K") %}
+  ${combination}
+  {% elsif (${13_distinct_value} == "Levi's") %}
+  ${combination}
+  {% else %}
+  NULL
+  {% endif %} ;;
+}
 
 
   dimension: cost {
