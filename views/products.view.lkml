@@ -32,6 +32,72 @@ dimension: combination {
   type: string
   sql: concat(${brand},",",${category},",",${department}) ;;
 }
+  parameter: 13_distinct_value {
+    type: unquoted
+    allowed_value: {
+      label: "Brand"
+      value: "Allegra K"
+    }
+    allowed_value: {
+      label: "Brand"
+      value: "Levi's"
+    }
+    allowed_value: {
+      label: "Brand"
+      value: "Speedo"
+    }
+    allowed_value: {
+      label: "Brand"
+      value: "Dockers"
+    }
+    allowed_value: {
+      label: "Brand"
+      value: "Hanes"
+    }
+    allowed_value: {
+      label: "Department"
+      value: "Jeans"
+    }
+    allowed_value: {
+      label: "Brand"
+      value: "Allegra K"
+    }
+    allowed_value: {
+      label: "Department"
+      value: "Underwear"
+    }
+    allowed_value: {
+      label: "Brand"
+      value: "Carhartt"
+    }
+    allowed_value: {
+      label: "Brand"
+      value: "Allegra K"
+    }
+    allowed_value: {
+      label: "Brand"
+      value: "Levi's"
+    }
+    allowed_value: {
+      label: "Deparment"
+      value: "Active"
+    }
+    allowed_value: {
+      label: "Brand"
+      value: "Hagger"
+    }
+    allowed_value: {
+      label: "Cat"
+      value: "Men"
+    }
+    allowed_value: {
+      label: "Cat"
+      value: "Women"
+    }
+  }
+
+
+
   dimension: cost {
     type: number
     sql: ${TABLE}.cost ;;
