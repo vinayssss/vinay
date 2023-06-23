@@ -35,63 +35,63 @@ dimension: combination {
   parameter: 13_distinct_value {
     type: unquoted
     allowed_value: {
-      label: "Brand"
+      label: "Allegra K"
       value: "Allegra K"
     }
     allowed_value: {
-      label: "Brand"
+      label: "Levi's"
       value: "Levi's"
     }
     allowed_value: {
-      label: "Brand"
+      label: "Speedo"
       value: "Speedo"
     }
     allowed_value: {
-      label: "Brand"
+      label: "Dockers"
       value: "Dockers"
     }
     allowed_value: {
-      label: "Brand"
+      label: "Hanes"
       value: "Hanes"
     }
     allowed_value: {
-      label: "Department"
+      label: "Jeans"
       value: "Jeans"
     }
     allowed_value: {
-      label: "Brand"
+      label: "Allegra K"
       value: "Allegra K"
     }
     allowed_value: {
-      label: "Department"
+      label: "Underwear"
       value: "Underwear"
     }
     allowed_value: {
-      label: "Brand"
+      label: "Carhartt"
       value: "Carhartt"
     }
     allowed_value: {
-      label: "Brand"
+      label: "Allegra K"
       value: "Allegra K"
     }
     allowed_value: {
-      label: "Brand"
+      label: "Levi's"
       value: "Levi's"
     }
     allowed_value: {
-      label: "Deparment"
+      label: "Active"
       value: "Active"
     }
     allowed_value: {
-      label: "Brand"
+      label: "Hagger"
       value: "Hagger"
     }
     allowed_value: {
-      label: "Cat"
+      label: "Men"
       value: "Men"
     }
     allowed_value: {
-      label: "Cat"
+      label: "Women"
       value: "Women"
     }
   }
