@@ -95,7 +95,10 @@ dimension: combination {
       value: "Women"
     }
   }
-
+dimension: Combination_13{
+  type: string
+  sql: ${13_distinct_value} ;;
+}
 
 
   dimension: cost {
