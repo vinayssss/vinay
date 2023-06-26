@@ -22,7 +22,7 @@ view: products {
     type: string
     sql: ${TABLE}.brand ;;
     #drill_fields: [brand,total_cost]
-    suggestions: ["Allegra K","Speedo"]
+    suggestions: ["Allegra K","Speedo","Dockers","Hanes"]
   }
 
   dimension: category {
