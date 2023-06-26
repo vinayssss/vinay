@@ -94,6 +94,7 @@ view: order_items {
   measure: average_sale_price {
     type: average
     sql: ${sale_price} ;;
+    value_format_name: usd
   }
 
   dimension_group: shipped {
