@@ -22,6 +22,7 @@ view: products {
     type: string
     sql: ${TABLE}.brand ;;
     #drill_fields: [brand,total_cost]
+    suggestions: ["Allegra K","Speedo"]
   }
 
   dimension: category {
@@ -33,37 +34,37 @@ dimension: combination {
   sql: concat(${brand},",",${category},",",${department}) ;;
   #suggestions: ["Men","Women","Allegra K"]
 }
-  parameter: 13_distinct_value {
-    type: string
-    allowed_value: {
-      label: "Allegra K"
-      value: "Allegra K"
-    }
-    allowed_value: {
-      label: "Levi's"
-      value: "Levi's"
-    }
+  # parameter: 13_distinct_value {
+  #   type: string
+  #   allowed_value: {
+  #     label: "Allegra K"
+  #     value: "Allegra K"
+  #   }
+  #   allowed_value: {
+  #     label: "Levi's"
+  #     value: "Levi's"
+  #   }
 
-    allowed_value: {
-      label: "Men"
-      value: "Men"
-    }
+  #   allowed_value: {
+  #     label: "Men"
+  #     value: "Men"
+  #   }
 
-  }
-dimension: combision{
-  label_from_parameter: 13_distinct_value
-  sql:
-  {% if 13_distinct_value._parameter_value == "Allegra K" %}
-  brand._value="Allegra K"
+  # }
+# dimension: combision{
+#   label_from_parameter: 13_distinct_value
+#   sql:
+#   {% if 13_distinct_value._parameter_value == "Allegra K" %}
+#   ${count_Allegra}
 
-  {% else %}
-  NULL
-  {% endif %} ;;
-}
-dimension: Allegra_K{
-  type: string
-  sql: ${brand}="Allegra K" ;;
-}
+#   {% else %}
+#   NULL
+#   {% endif %} ;;
+# }
+# dimension: Allegra_K{
+#   type: string
+#   sql: ${brand}="Allegra K" ;;
+# }
 
   dimension: cost {
     type: number
@@ -97,6 +98,14 @@ dimension: costs {
     type: average
     sql: ${cost} ;;
   }
+  # measure: count_Allegra {
+  #   type: count
+  #   sql: ${id} ;;
+  #   filters: {
+  #     field: brand
+  #     value: "Allegra K"
+  #   }
+  # }
 
   dimension: department {
     type: string
