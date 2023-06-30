@@ -88,10 +88,10 @@ dimension: costs {
     sql: ${cost} ;;
     value_format_name: usd
     drill_fields: [brand,total_cost]
-    # link: {
-    #   label: "Explore Top 20 Results"
-    #   url: "{{ link }}&limit=20"
-    # }
+    link: {
+      label: "Explore Top 20 Results"
+      url: "{{ link }}&limit=20"
+    }
   }
 
   measure: average_cost {
