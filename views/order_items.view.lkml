@@ -32,7 +32,7 @@ view: order_items {
   }
   dimension: current_date_num {
     type: number
-    sql: extract_days{now()} ;;
+    sql: extract(day{now()}) ;;
   }
   dimension_group: delivered {
     type: time
