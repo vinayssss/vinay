@@ -26,7 +26,7 @@ view: order_items {
       week,
       month,
       quarter,
-      year
+      year,day_of_month
     ]
     sql: ${TABLE}.created_at ;;
   }
