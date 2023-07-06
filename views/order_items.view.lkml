@@ -35,11 +35,23 @@ view: order_items {
   #   sql:  EXTRACT(DAY FROM ${created_date}(now());;
   # }
 
-  dimension_group: created1 {
+  # dimension_group: created1 {
+  #   type: time
+  #   timeframes: [time, date]
+  #   sql: CONVERT_TIMEZONE(${TABLE}.created_at,'UTC','IST') ;;
+  # }
+  dimension_group: current_date {
     type: time
-    timeframes: [time, date]
-    sql: CONVERT_TIMEZONE(${TABLE}.created_at,'UTC','IST') ;;
+    label: "Current date"
+    group_label: "Non-Jira Related"
+    timeframes: [
+      time,date
+    ]
+    sql: CURRENT_DATETIME();;
   }
+
+
+
   dimension_group: delivered {
     type: time
     timeframes: [
