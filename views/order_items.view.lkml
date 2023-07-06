@@ -34,6 +34,12 @@ view: order_items {
   #   type: number
   #   sql:  EXTRACT(DAY FROM ${created_date}(now());;
   # }
+
+  dimension_group: created1 {
+    type: time
+    timeframes: [time, date]
+    sql: CONVERT_TZ(${TABLE}.created_at,'UTC','IST') ;;
+  }
   dimension_group: delivered {
     type: time
     timeframes: [
