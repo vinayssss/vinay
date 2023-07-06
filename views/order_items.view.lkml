@@ -30,10 +30,10 @@ view: order_items {
     ]
     sql: ${TABLE}.created_at ;;
   }
- dimension_group: current_day {
-   type: time
-  sql: date_trunc("day",current_date()) ;;
- }
+  # dimension: day {
+  #   type: number
+  #   sql:  EXTRACT(DAY FROM ${created_date}(now());;
+  # }
   dimension_group: delivered {
     type: time
     timeframes: [
