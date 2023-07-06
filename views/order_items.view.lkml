@@ -38,7 +38,7 @@ view: order_items {
   dimension_group: created1 {
     type: time
     timeframes: [time, date]
-    sql: (FORMAT_TIMESTAMP('%F %T', CONVERT_TZ(order_items.created_at,'UTC','IST') , 'Asia/Kolkata')) ;;
+    sql: CONVERT_TIMEZONE(${TABLE}.created_at,'UTC','IST') ;;
   }
   dimension_group: delivered {
     type: time
