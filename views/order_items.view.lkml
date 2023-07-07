@@ -47,9 +47,16 @@ view: order_items {
   }
 
   dimension: time1 {
-    type: date_time_of_day
+    type: date_time
     sql: CURRENT_TIMESTAMP();;
   }
+
+  dimension: time2 {
+    type: date_time
+    sql: EXTRACT(day FROM ${created_date} [
+Asia - Kolkata]);;
+  }
+
 
   dimension_group: current_date {
     type: time
