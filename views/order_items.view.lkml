@@ -42,8 +42,8 @@ view: order_items {
   # }
 
   dimension: time {
-    type: date_time
-    sql: TIME_SUB(${created_date}, 5) ;;
+    type: string
+    sql: SELECT CURRENT_TIMESTAMP();;
   }
 
   dimension_group: current_date {
