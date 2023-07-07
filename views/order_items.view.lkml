@@ -43,7 +43,7 @@ view: order_items {
 
   dimension: time {
     type: string
-    sql: SELECT CURRENT_TIMESTAMP();;
+    sql: CURRENT_TIMESTAMP();;
   }
 
   dimension_group: current_date {
