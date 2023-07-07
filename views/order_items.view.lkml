@@ -46,6 +46,11 @@ view: order_items {
     sql: CURRENT_TIMESTAMP();;
   }
 
+  dimension: time1 {
+    type: date_time_of_day
+    sql: CURRENT_TIMESTAMP();;
+  }
+
   dimension_group: current_date {
     type: time
     label: "Current date"
