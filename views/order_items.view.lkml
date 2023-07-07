@@ -43,7 +43,7 @@ view: order_items {
 
   dimension: time {
     type: date_time
-    sql: TIME_SUB(${created_date}, 5.30) ;;
+    sql: TIME_SUB(${created_date}, 5) ;;
   }
 
   dimension_group: current_date {
