@@ -26,7 +26,7 @@ view: order_items {
       week,
       month,
       quarter,
-      year,day_of_month
+      year,day_of_month,month_name
     ]
     sql: ${TABLE}.created_at ;;
   }
@@ -52,9 +52,22 @@ view: order_items {
   }
 
   dimension: time2 {
+    type: string
+    sql: EXTRACT(day FROM ${created_date} [AT TIME ZONE IST]);;
+  }
+
+  dimension: time3 {
     type: date_time
-    sql: EXTRACT(day FROM ${created_date} [
-Asia - Kolkata]);;
+    sql: EXTRACT(DAY FROM timestamp_value AT TIME ZONE "IST");;
+  }
+
+  dimension: time4 {
+    type: string
+    sql: TIMESTAMP_ADD(${created_date},INTERVAL 5 HOUR 30 MINUTE) ;;
+  }
+  dimension: time5 {
+    type: date_time
+    sql: TIMESTAMP((${created_date}, "Asia/Kolkata")) ;;
   }
 
 
