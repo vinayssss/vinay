@@ -40,6 +40,12 @@ view: order_items {
   #   timeframes: [time, date]
   #   sql: CONVERT_TIMEZONE(${TABLE}.created_at,'UTC','IST') ;;
   # }
+
+  dimension: time {
+    type: date_time
+    sql: TIME_SUB(${created_date}, 5.30) ;;
+  }
+
   dimension_group: current_date {
     type: time
     label: "Current date"
