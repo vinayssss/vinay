@@ -33,7 +33,7 @@ view: order_items {
 
   dimension: hour {
     type: date_time
-    sql: EXTRACT(HOUR FROM ${created_time})    ;;
+    sql: EXTRACT(HOUR FROM ${created_date})    ;;
   }
   # dimension: day {
   #   type: number
