@@ -26,9 +26,14 @@ view: order_items {
       week,
       month,
       quarter,
-      year,day_of_month,month_name
+      year,day_of_month,month_name,day_of_week
     ]
     sql: ${TABLE}.created_at ;;
+  }
+
+  dimension: hour {
+    type: number
+    sql: EXTRACT(HOUR FROM CURRENT_TIMESTAMP())    ;;
   }
   # dimension: day {
   #   type: number
