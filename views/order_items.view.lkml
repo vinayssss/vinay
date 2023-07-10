@@ -26,14 +26,14 @@ view: order_items {
       week,
       month,
       quarter,
-      year,day_of_month,month_name,day_of_week
+      year,day_of_month,month_name,day_of_week,hour_of_day
     ]
     sql: ${TABLE}.created_at ;;
   }
 
   dimension: hour {
     type: date_time
-    sql: EXTRACT(HOUR FROM DATE(${created_date}))    ;;
+    sql: EXTRACT(HOUR FROM DATETIME(2008, 12, 25, 15, 30, 00)) as hour   ;;
   }
   # dimension: day {
   #   type: number
