@@ -146,7 +146,7 @@ view: order_items {
     sql: ${TABLE}.returned_at ;;
   }
   dimension: time12 {
-    type: number
+    type: date_time
     sql: ${returned_time} ;;
   }
   measure: av_ti {
