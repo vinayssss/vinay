@@ -60,45 +60,45 @@ view: order_items {
   #   sql: CONVERT_TIMEZONE(${TABLE}.created_at,'UTC','IST') ;;
   # }
 
-  dimension: time {
-    type: string
-    sql: CURRENT_TIMESTAMP();;
-  }
+  # dimension: time {
+  #   type: string
+  #   sql: CURRENT_TIMESTAMP();;
+  # }
 
   dimension: time1 {
     type: date_time
     sql: CURRENT_TIMESTAMP();;
   }
 
-  dimension: time2 {
-    type: string
-    sql: EXTRACT(day FROM ${created_date} [AT TIME ZONE IST]);;
-  }
+  # dimension: time2 {
+  #   type: string
+  #   sql: EXTRACT(day FROM ${created_date} [AT TIME ZONE IST]);;
+  # }
 
-  dimension: time3 {
-    type: date_time
-    sql: EXTRACT(DAY FROM timestamp_value AT TIME ZONE "IST");;
-  }
+  # dimension: time3 {
+  #   type: date_time
+  #   sql: EXTRACT(DAY FROM timestamp_value AT TIME ZONE "IST");;
+  # }
 
-  dimension: time4 {
-    type: string
-    sql: TIMESTAMP_ADD(${created_date},INTERVAL 5 HOUR 30 MINUTE) ;;
-  }
-  dimension: time5 {
-    type: date_time
-    sql: TIMESTAMP((${created_date}, "Asia/Kolkata")) ;;
-  }
+  # dimension: time4 {
+  #   type: string
+  #   sql: TIMESTAMP_ADD(${created_date},INTERVAL 5 HOUR 30 MINUTE) ;;
+  # }
+  # dimension: time5 {
+  #   type: date_time
+  #   sql: TIMESTAMP((${created_date}, "Asia/Kolkata")) ;;
+  # }
 
 
-  dimension_group: current_date {
-    type: time
-    label: "Current date"
-    group_label: "Non-Jira Related"
-    timeframes: [
-      time,date
-    ]
-    sql: CURRENT_DATETIME();;
-  }
+  # dimension_group: current_date {
+  #   type: time
+  #   label: "Current date"
+  #   group_label: "Non-Jira Related"
+  #   timeframes: [
+  #     time,date
+  #   ]
+  #   sql: CURRENT_DATETIME();;
+  # }
 
 
 
