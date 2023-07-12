@@ -38,12 +38,12 @@ view: order_items {
 
   measure: avg_time {
     type: average
-    sql: ${created_time} ;;
+    sql: ${created_date} ;;
     value_format_name: decimal_2
   }
   measure: avg_time1 {
     type: average
-    sql: ${created_time} ;;
+    sql: ${created_date} ;;
 
     html: {% assign seconds=value | modulo: 60 %}
 
