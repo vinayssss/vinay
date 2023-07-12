@@ -145,14 +145,15 @@ view: order_items {
     ]
     sql: ${TABLE}.returned_at ;;
   }
-  dimension: time12 {
-    type: date_time
-    sql: ${returned_time} ;;
+  dimension: date_formatted {
+    sql: ${created_date} ;;
+    html:{{ rendered_value | date: "%b %d, %y" }};;
   }
   measure: av_ti {
     type: average
     sql: ${returned_time} ;;
     # value_format_name: decimal_2
+    html:{{ rendered_value | date: "%M : %S" }};;
   }
 
   dimension: sale_price {
