@@ -35,6 +35,20 @@ view: order_items {
     type: date_time
     sql: EXTRACT(HOUR FROM DATETIME(2008, 12, 25, 15, 30, 00)) as hour   ;;
   }
+
+  measure: avg_time {
+    type: average
+    sql: ${created_time} ;;
+    value_format_name: decimal_2
+  }
+  measure: avg_time1 {
+    type: average
+    sql: ${created_time} ;;
+
+    html: {% assign seconds=value | modulo: 60 %}
+
+      {{ value | divided_by: 60 | floor }}:{% if seconds < 10 %}0{% endif %}{{ seconds }} ;;
+  }
   # dimension: day {
   #   type: number
   #   sql:  EXTRACT(DAY FROM ${created_date}(now());;
