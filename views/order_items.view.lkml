@@ -145,6 +145,10 @@ view: order_items {
     ]
     sql: ${TABLE}.returned_at ;;
   }
+  dimension: time12 {
+    type: number
+    sql: ${returned_time} ;;
+  }
   measure: av_ti {
     type: average
     sql: ${returned_time} ;;
