@@ -145,6 +145,11 @@ view: order_items {
     ]
     sql: ${TABLE}.returned_at ;;
   }
+  measure: av_ti {
+    type: average
+    sql: ${returned_time} ;;
+    value_format_name: decimal_2
+  }
 
   dimension: sale_price {
     type: number
