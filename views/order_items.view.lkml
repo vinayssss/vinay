@@ -148,7 +148,7 @@ view: order_items {
   measure: av_ti {
     type: average
     sql: ${returned_time} ;;
-    value_format_name: decimal_2
+    # value_format_name: decimal_2
   }
 
   dimension: sale_price {
