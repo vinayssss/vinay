@@ -30,6 +30,20 @@ view: order_items {
     ]
     sql: ${TABLE}.created_at ;;
   }
+dimension_group: day_of_week {
+  type: time
+  timeframes: [day_of_week]
+  sql: ${created_date} ;;
+  convert_tz: no
+}
+
+dimension_group: hour_of_day {
+  type: time
+  timeframes: [hour_of_day]
+  sql: ${created_date} ;;
+  convert_tz: no
+}
+
 
   dimension: hour {
     type: date_time
