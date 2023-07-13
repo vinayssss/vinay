@@ -42,6 +42,14 @@ dimension_group: hour_of_day {
   timeframes: [hour_of_day]
   sql: ${created_date} ;;
   convert_tz: no
+  html:
+        {% if value < 12 %}
+          {{rendered_value | prepend :"0" | slice : -2,2 | append :"" | append :"AM"}}
+        {% elsif value==12%}
+          {{rendered_value | prepend :"0" | slice : -2,2 | append :"" | append :"PM"}}
+        {%else%}
+          {{rendered_value | minus:12 | prepend :"0" | slice : -2,2 | append :"" | append :"PM"}}
+        {%endif%};;
 }
 
 
