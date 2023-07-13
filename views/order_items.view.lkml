@@ -44,11 +44,11 @@ dimension_group: hour_of_day {
   convert_tz: no
   html:
         {% if value < 12 %}
-          {{rendered_value | prepend :"0" | slice : -2,2 | append :"" | append :"am"}}
-        {% elsif value==12%}
-          {{rendered_value | prepend :"0" | slice : -2,2 | append :"" | append :"pm"}}
+          {{rendered_value | prepend :"0" | slice : -2,2 | append :" " | append :"am"}}
+        {% elsif value==12 %}
+          {{rendered_value | prepend :"0" | slice : -2,2 | append :" " | append :"pm"}}
         {%else%}
-          {{rendered_value | minus:12 | prepend :"0" | slice : -2,2 | append :"" | append :"pm"}}
+          {{rendered_value | minus:12 | prepend :"0" | slice : -2,2 | append :" " | append :"pm"}}
         {%endif%};;
 }
 
