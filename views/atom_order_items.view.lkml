@@ -189,7 +189,7 @@ view: atom_order_items {
       id,
       users.last_name,
       users.id,
-      users.first_name,
+      users.Initial_name,
       inventory_items.id,
       inventory_items.product_name
     ]

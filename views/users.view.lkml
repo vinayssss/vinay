@@ -70,9 +70,9 @@ view: users {
     sql: ${TABLE}.email ;;
   }
 
-  dimension: first_name {
+  dimension: Initial_name {
     type: string
-    sql: ${TABLE}.first_name ;;
+    sql: ${TABLE}.Initial_name ;;
   }
 
   dimension: gender {
@@ -136,7 +136,7 @@ dimension: gender_ {
     fields: [
       id,
       last_name,
-      first_name,
+      Initial_name,
       atom_events.count,
       atom_order_items.count,
       combined_orders_users.count,

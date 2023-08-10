@@ -84,9 +84,9 @@ view: atom_users {
     sql: ${TABLE}.email ;;
   }
 
-  dimension: first_name {
+  dimension: Initial_name {
     type: string
-    sql: ${TABLE}.first_name ;;
+    sql: ${TABLE}.Initial_name ;;
   }
 
   dimension: gender {
@@ -126,6 +126,6 @@ view: atom_users {
 
   measure: count {
     type: count
-    drill_fields: [id, last_name, first_name]
+    drill_fields: [id, last_name, Initial_name]
   }
 }

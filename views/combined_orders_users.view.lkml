@@ -19,6 +19,6 @@ view: combined_orders_users {
 
   measure: count {
     type: count
-    drill_fields: [users.last_name, users.id, users.first_name]
+    drill_fields: [users.last_name, users.id, users.Initial_name]
   }
 }
